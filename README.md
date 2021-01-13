@@ -5,11 +5,11 @@ Custom Alteryx SDK tool that generates QR codes from input data.
 ## Installation
 Download the yxi file and double click to install in Alteyrx. 
 
-<img src="https://github.com/bobpeers/Alteryx_SDK_QR_Code_Generator/blob/main/images/qr_install.png" width="300" alt="QR Codes Install Dialog">
+<img src="https://github.com/bobpeers/Alteryx_SDK_QR_Code_Generator/blob/main/images/qr_install.png" width="600" alt="QR Codes Install Dialog">
 
 The tool will be installed in the __Developer__ category.
 
-<img src="https://github.com/bobpeers/Alteryx_SDK_QR_Code_Generator/blob/main/images/qr_toolbar.png" alt="QR Codes Install Toolbar">
+<img src="https://github.com/bobpeers/Alteryx_SDK_QR_Code_Generator/blob/main/images/qr_toolbar.png" width="600" alt="QR Codes Install Toolbar">
 
 ## Requirements
 
@@ -25,7 +25,8 @@ The tool con be configured for:
 
 ## Outputs
 The tool outputs a base 64 encoded image field. This can be fed through a Blob Convert tool using the Base 64 to binary option.
-<img src="https://github.com/bobpeers/Alteryx_SDK_QR_Code_Generator/blob/main/images/blob_convert.png" width="1000" alt="QR Codes workflow">
+
+<img src="https://github.com/bobpeers/Alteryx_SDK_QR_Code_Generator/blob/main/images/blob_convert.png" width="600" alt="QR Codes workflow">
 
 ## Usage
 This workflow demonstrates the tool in use. The workflow shown here:
@@ -34,4 +35,4 @@ This workflow demonstrates the tool in use. The workflow shown here:
 
 The output can be visualized using a Browse tool as shown here.
 
-<img src="https://github.com/bobpeers/Alteryx_SDK_QR_Code_Generator/blob/main/images/qr_output.png" width="500" alt="QR Codes output">
+<img src="https://github.com/bobpeers/Alteryx_SDK_QR_Code_Generator/blob/main/images/qr_output.png" width="600" alt="QR Codes output">
