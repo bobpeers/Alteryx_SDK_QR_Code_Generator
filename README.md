@@ -1,3 +1,3 @@
-# Alteryx SDK QR CodeGenerator
+# Alteryx SDK QR Code Generator
 
 Alteryx SDK tool to generate QR codes.
