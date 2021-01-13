@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>QR Codes</title>
+  <script type="text/javascript">
+    document.write('<link rel="import" href="' + window.Alteryx.LibDir + '2/lib/includes.html">');
+  </script>
+  <style>
+
+    h1 {
+      padding: 10px 0 5px 0;
+      margin: 15px 5px 5px 0;
+      font-size: 1.556em;
+      font-weight: normal;
+      color: #52617f;
+    }
+
+    label {
+      color: #8698ba;
+      font-size: 1.167em;
+      margin: 6px 0px 3px 0;
+      padding: 0;
+      font-weight: normal;
+      line-height: 1.42857143;
+    }
+
+    fieldset {
+      border:none;
+    }
+
+    body {
+      font-size: 10pt;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    section,
+    label,
+    select,
+    checkbox,
+    ayx {
+      padding: 10px 0 10px 0;
+    }
+
+    #BackColour {
+      margin-left: 20px;
+    }
+
+    .header-ruler {
+      background-color: #cccccc;
+      height: 1px;
+      border: 0 none;
+      flex-grow: 1;
+      margin-top: 0.625em;
+      margin-left: 10px;
+    }
+    .header-message {
+      color: #52617f;
+      font-size: 1.78em;
+      font-weight: normal;
+      padding-bottom: 0px;
+      margin: 0px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  </style>
+  </head>
+<body>
+  <div class="header-message">
+    <div>XMSG("Generate QR Codes")</div>
+    <hr class="header-ruler"></hr>
+    </div>
+  <form>
+    <fieldset>
+      <section>
+        <label>XMSG("Select the source field")</label>
+        <ayx data-ui-props="{type: 'DropDown'}" data-item-props="{dataName: 'SourceField', dataType: 'FieldSelector', fieldType: 'NumericOrString', anchorIndex:'0', connectionIndex:'0'}"></ayx>
+	</section>
+	<section>
+        <label>XMSG("Scale")</label>
+        <ayx data-ui-props='{type:"NumericSpinner", widgetId:"Scale"}'></ayx>
+	</section>
+		  <section>
+        <label>XMSG("Select QR code colour")</label>
+        <ayx data-ui-props='{type:"ColorPicker", widgetId:"ColorPicker", showSwatches: false}' data-item-props="{dataName: 'ChosenColour'}"></ayx>
+      </section>
+      <section>
+		    <ayx data-ui-props="{type:'CheckBox', label:'Transparent Background'}" data-item-props="{dataName:'transparent'}"></ayx>
+    </section>
+    <section id='BackColour'>
+      <label>XMSG("Select background QR code colour")</label>
+      <ayx data-ui-props='{type:"ColorPicker", widgetId:"ColorPickerB", showSwatches: false}' data-item-props="{dataName: 'ChosenBackColour'}"></ayx>
+    </section>
+    <section>
+      <h2>XMSG("Sample QR code")</h2>
+      <img src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAQkAAAEJAQMAAAC9pkAnAAAABlBMVEXw+P9tbW216+3HAAAAAXRSTlMAQObYZgAAAr9JREFUeNrtWUGOo0AQK5
+      ZDH/OE/gl8DAkkPhZ+0k/gyAFRa7tAozntnkY1UvoQZZJRZJXctsuYfc7n/NrzcvfrtdSy+WJl2/tmo592jPj8wPd//v0TP/YvhLuYDa/TgG6pR+dntW63agO+ywh39QNwK0bsDSNe3bd9A
+      lz8mRWuze3o9sn8st7LZVM9UsPtwQVfG17Oeoz77GnhirvA3BGkgRbxeVbuShnWhnF+e0mqDDcjcMt2jhPv/G29ePCzWP4Tbn8rg0MPpGa+icV7n3K6APmmhr3B4vK2STJcC29e2unqvoGs
+      o5TBvYnUGafbk6yTHfKy0eOqub5IqQxNQma0CZy5wSvmZqFrGW0C1uthvTCMqYoRmHhK3bU7zoQCA3hMV8qQ8arN5EFPVwt8Jo0gcM+pDApj4gHenbp0IWk5uatbBvFdGcvAgy28YsnJXWO
+      A9ONWBjBCcYGxzHJeNXuUC/Ig8T0NruYt51WLqLtRvpAZsAaBu7ELpbSJgy9CqkRmcmLjpcsJ92u1pL9puswR1VIqQ0yyi+mKsYwLERzywW3iLhMjWaw5BzfyTpe1CIQM8jXVcpER2IkzKk
+      PcspVhcQrGFlfEeSVtcQjtpOsqMXKFj+ZpbTmXH3UKppVihE2U684RKaerwdLLmMdHOvHdkU1pN+FIX31Imj4rFN+kcKUMbMaYzepD25TTZctECvjd7xobhzm8IqfusgfxZ13nnLVNAHPSv
+      DvuJGvU0YvFJqzkmzJAAqR7UZVDh7AhTG5OahPsd5uaaMUFDFt596yJG0guP0y5zuVH2exM2+9SBYbnKYUNd2+WMpGxzQOB1S4o5YLKa2wYaZ/8uDJNbG1cglvaXS0oQPmKpMAHgmtT95AW
+      7hpVTlibevQr0kNO7ppFgfN+PJlanHOboDLcBY56x0Ja6Dlxyhbncz7nF56/jciPYEmYuwYAAAAASUVORK5CYII=" alt="QR code sample" />
+    </section>
+    </fieldset>
+  </form>
+   <script type="text/javascript">
+
+    Alteryx.Gui.BeforeLoad = function (manager, AlteryxDataItems, json) {
+
+    // Create constrained int item
+    var constrainedNumberDataItem = new AlteryxDataItems.ConstrainedInt('scale', {
+      max: 10,
+      min: 1,
+      step: 1
+    })
+    manager.addDataItem(constrainedNumberDataItem)
+    // Bind to NumericSpinner widget
+    manager.bindDataItemToWidget(constrainedNumberDataItem, 'Scale')
+    window.Alteryx.Gui.Manager.getDataItem('scale').setValue(3)
+
+    window.Alteryx.Gui.Manager.getDataItem('transparent').setValue(1)
+  }
+    const hide_options = () => {
+    if (Alteryx.Gui.Manager.getDataItem('transparent').getValue() == 1) {
+      document.getElementById('BackColour').style.visibility = 'hidden'
+    }
+    else {
+      document.getElementById('BackColour').style.visibility = 'visible'
+    }
+  }
+
+Alteryx.Gui.AfterLoad = (manager, AlteryxDataItems) => {
+    hide_options()
+    manager.getDataItem('transparent').registerPropertyListener('value', hide_options)
+  }
+  </script>
+</body>
+</html>

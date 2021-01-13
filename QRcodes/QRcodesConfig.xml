@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<AlteryxJavaScriptPlugin>
+  <EngineSettings EngineDll="Python" EngineDllEntryPoint="QRcodesEngine.py" SDKVersion="10.1" />
+  <GuiSettings Html="QRcodesGUI.html" Icon="QRcodesIcon.png" Help="https://github.com/bobpeers/Alteryx_SDK_QRcodes" SDKVersion="10.1">
+    <InputConnections>
+      <Connection Name="Input" AllowMultiple="False" Optional="False" Type="Connection" Label="I"/>
+    </InputConnections>
+    <OutputConnections>
+      <Connection Name="Output" AllowMultiple="False" Optional="False" Type="Connection" Label="O"/>
+    </OutputConnections>
+  </GuiSettings>
+  <Properties>
+    <MetaInfo>
+      <Name>QR Code Generator</Name>
+      <Description>Generate QR codes</Description>
+      <CategoryName>Developer</CategoryName>
+      <SearchTags>qr, code, python, barcode</SearchTags>
+      <ToolVersion>1.0</ToolVersion>
+      <Author>Bob Peers</Author>
+      <Company></Company>
+      <Copyright>2021</Copyright>
+    </MetaInfo>
+  </Properties>
+</AlteryxJavaScriptPlugin>
