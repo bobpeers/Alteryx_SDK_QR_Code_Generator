@@ -16,7 +16,7 @@ The tool will be installed in the __Developer__ category.
 The tool will install the Python libary called [segno](https://segno.readthedocs.io/en/latest/)
 
 ## Usage
-The tool con be configured for:
+The tool can be configured as follows:
 
 - Source field is the field to encode as a QR code.
 - Scale, this changes the size of the QR codes 1 is small, 10 is large. I suggest you experiment to get the required size.
