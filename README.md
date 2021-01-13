@@ -13,7 +13,7 @@ The tool will be installed in the __Developer__ category.
 
 ## Requirements
 
-The tool will install the Python libary called [segno]|(https://segno.readthedocs.io/en/latest/)
+The tool will install the Python libary called [segno](https://segno.readthedocs.io/en/latest/)
 
 ## Usage
 The tool con be configured for:
